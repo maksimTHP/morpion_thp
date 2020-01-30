@@ -22,7 +22,7 @@ class Board
         joueur_tour = $name2
         joueur_signe = "O"
       end
-      
+
       # AFFICHAGE GRILLE
       puts '    1   2   3'.red
       puts '  +---+---+---+'.yellow
@@ -52,7 +52,7 @@ class Board
       puts '  +---+---+---+'.yellow
 
       print "#{joueur_tour}, où veut tu jouer ? (A1,B2,C3..) ".yellow  # On annonce le joueur qui va jouer
-      puts "(tu as les #{joueur_signe})".light_black                   # On annonce le signe du joueur
+      puts "(tu as les #{joueur_signe})"                               # On annonce le signe du joueur
       print '> '
       reponse = gets.chomp.upcase                                      # Reponse entré par le joueur - indiferent si lettre majuscule ou minuscule
       system('clear')
