@@ -66,6 +66,7 @@ class Board
         else
           #system('clear')
           if @valeur[z] == ' '    # Valide les positions
+            system('clear')
             if @tour_de_jeu.even?
               @valeur[z] = 'X'
               @tab_win[z] = 'X'
@@ -87,39 +88,38 @@ class Board
 
       if @tab_win[1] == @tab_win[2] && @tab_win[3] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 2 3 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[4] == @tab_win[5] && @tab_win[6] == @tab_win[4]
         puts "#{joueur_tour} est vainqueur : 4 5 6 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[7] == @tab_win[8] && @tab_win[9] == @tab_win[7]
         puts "#{joueur_tour} est vainqueur : 7 8 9 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[1] == @tab_win[4] && @tab_win[7] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 4 7 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[2] == @tab_win[5] && @tab_win[8] == @tab_win[2]
         puts "#{joueur_tour} est vainqueur : 2 5 8 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[3] == @tab_win[6] && @tab_win[9] == @tab_win[3]
         puts "#{joueur_tour} est vainqueur : 3 6 9 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[1] == @tab_win[5] && @tab_win[9] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 5 9 ".green
-        break
+        @tour_de_jeu = 11
 
       elsif @tab_win[3] == @tab_win[5] && @tab_win[7] == @tab_win[3]
         puts "#{joueur_tour} est vainqueur : 3 5 7 ".green
-        break
+        @tour_de_jeu = 11
 
     	end
 		end
-
 		puts 'Egalité'.red if @tour_de_jeu == 9
 	end
 

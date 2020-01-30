@@ -7,6 +7,7 @@ require_relative 'lib/app/menu'
 def perform
   choix = 1
   while choix == 1       # Boucle pour recommencer la partie
+		system('clear')
     menu = Menu.new      # On affiche l' introduction "nom des joueurs"
     system('clear')
     board = Board.new    # On demarre le jeu
