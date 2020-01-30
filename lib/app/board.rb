@@ -87,35 +87,35 @@ class Board
 
       if @tab_win[1] == @tab_win[2] && @tab_win[3] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 2 3 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[4] == @tab_win[5] && @tab_win[6] == @tab_win[4]
         puts "#{joueur_tour} est vainqueur : 4 5 6 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[7] == @tab_win[8] && @tab_win[9] == @tab_win[7]
         puts "#{joueur_tour} est vainqueur : 7 8 9 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[1] == @tab_win[4] && @tab_win[7] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 4 7 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[2] == @tab_win[5] && @tab_win[8] == @tab_win[2]
         puts "#{joueur_tour} est vainqueur : 2 5 8 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[3] == @tab_win[6] && @tab_win[9] == @tab_win[3]
         puts "#{joueur_tour} est vainqueur : 3 6 9 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[1] == @tab_win[5] && @tab_win[9] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 5 9 ".green
-        @tour_de_jeu = 11
+        break
 
       elsif @tab_win[3] == @tab_win[5] && @tab_win[7] == @tab_win[3]
         puts "#{joueur_tour} est vainqueur : 3 5 7 ".green
-        @tour_de_jeu = 11
+        break
 
     	end
 		end
