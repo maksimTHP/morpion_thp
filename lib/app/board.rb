@@ -52,10 +52,11 @@ class Board
       puts ' | '.yellow
       puts '  +---+---+---+'.yellow
 
-      print "#{joueur_tour}, ou veut tu jouer ?(A1,B2,C3..) ".yellow
-      puts "(tu as les #{joueur_signe})".light_black
+      print "#{joueur_tour}, où veut tu jouer ?(A1,B2,C3..) ".yellow # On annonce le joueur qui va jouer
+      puts "(tu as les #{joueur_signe})".light_black # On annonce le signe du joueur
       print '> '
       reponse = gets.chomp # Reponse entré par le joueur
+      system('clear')
 
       z = 1 # Compteur de la boucle qui défini le tour à jouer
 
@@ -63,7 +64,7 @@ class Board
         if reponse != item
           z += 1
         else
-          system('clear')
+          #system('clear')
           if @valeur[z] == ' ' # Valide les positions
             if @tour_de_jeu.even?
               @valeur[z] = 'X'
@@ -76,7 +77,7 @@ class Board
           else
             system('clear')
             puts 'La place est deja prise !'.red
-						sleep 0.5
+						sleep 0.5 # petite pause d'un demi seconde
 						puts "Rejoue"
           end
         end
