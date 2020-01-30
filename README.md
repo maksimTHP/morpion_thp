@@ -1,3 +1,5 @@
+By : Maxime Besse, Romain Leporatti, Fernando Bergamini, Brice Gindre, Amandine Carle, Anouar Soufyani.
+
 Jeu Morpion
 
 Lancer le bundle install au debut.
