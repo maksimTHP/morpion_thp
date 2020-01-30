@@ -17,10 +17,10 @@ class Board
         joueur_signe = "X"
       elsif @tour_de_jeu.even?
         joueur_tour = $name1
-        jouer_signe = "X"
+        joueur_signe = "X"
       else
         joueur_tour = $name2
-        jouer_signe = "O"
+        joueur_signe = "O"
       end
       # AFFICHAGE GRILLE
       puts '    1   2   3'.red
@@ -53,7 +53,7 @@ class Board
       puts '  +---+---+---+'.yellow
 
       print "#{joueur_tour}, ou veut tu jouer ?(A1,B2,C3..) ".yellow
-      puts "(tu as les #{jouer_signe})".light_black
+      puts "(tu as les #{joueur_signe})".light_black
       print '> '
       reponse = gets.chomp # Reponse entré par le joueur
 
