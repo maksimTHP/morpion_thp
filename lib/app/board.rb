@@ -12,12 +12,15 @@ class Board
 
     @tour_de_jeu = 0       # Permet de compter le nombre de tour de jeu
     while @tour_de_jeu < 9 # On affiche la grille à chaque tour avec les choix des joueurs
-      if @tour_de_jeu == 0
+      if @tour_de_jeu == 0 # On affiche le joueur du tour
         joueur_tour = $name1
+        joueur_signe = "X"
       elsif @tour_de_jeu.even?
         joueur_tour = $name1
+        jouer_signe = "X"
       else
         joueur_tour = $name2
+        jouer_signe = "O"
       end
       # AFFICHAGE GRILLE
       puts '    1   2   3'.red
@@ -49,7 +52,8 @@ class Board
       puts ' | '.yellow
       puts '  +---+---+---+'.yellow
 
-      puts "#{joueur_tour}, ou veut tu jouer ?(A1,B2,C3..)".yellow
+      print "#{joueur_tour}, ou veut tu jouer ?(A1,B2,C3..) ".yellow
+      puts "(tu as les #{jouer_signe})".light_black
       print '> '
       reponse = gets.chomp # Reponse entré par le joueur
 
@@ -72,7 +76,7 @@ class Board
           else
             system('clear')
             puts 'La place est deja prise !'.red
-						sleep 1
+						sleep 0.5
 						puts "Rejoue"
           end
         end

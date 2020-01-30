@@ -2,7 +2,6 @@ require 'bundler'
 Bundler.require
 
 require_relative 'lib/app/board'
-#require_relative 'lib/app/player'
 require_relative 'lib/app/menu'
 
 def perform
