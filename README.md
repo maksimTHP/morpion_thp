@@ -1,4 +1,4 @@
-By : Maxime Besse, Romain Leporatti, Fernando Bergamini, Brice Gindre, Amandine Carle, Anouar Soufyani.
+By : Maxime Besse, Romain Leporatti, Fernando Bergamini, Brice Gindre, Amandine Carle, Anouar Haidary.
 
 Jeu Morpion
 
