@@ -55,13 +55,13 @@ class Board
           system('clear')
           if @valeur[z] == ' ' # Valide les positions
             if @tour_de_jeu.even?
-							nom_joueur = @name
-							puts nom_joueur
+							# nom_joueur = @name
+							# puts nom_joueur
               @valeur[z] = 'X'
               @tab_win[z] = 'X'
             else
-							nom_joueur = 2.name
-							puts nom_joueur
+							# nom_joueur = 2.name
+							# puts nom_joueur
               @valeur[z] = 'O'
               @tab_win[z] = 'O'
             end
