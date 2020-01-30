@@ -1,8 +1,8 @@
 class Player #class player qui va initialiser mes joueurs
-	attr_accessor :name
+	attr_accessor :names
 
 	def initialize(name)
-	  @name = name
+	  names = name
 	end
 
 end

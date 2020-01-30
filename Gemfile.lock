@@ -12,21 +12,20 @@ GEM
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
       rspec-mocks (~> 3.9.0)
-    rspec-core (3.9.0)
-      rspec-support (~> 3.9.0)
+    rspec-core (3.9.1)
+      rspec-support (~> 3.9.1)
     rspec-expectations (3.9.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
-    rspec-mocks (3.9.0)
+    rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
-    rspec-support (3.9.0)
+    rspec-support (3.9.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
   colorize
   pry
   rspec
@@ -35,4 +34,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   2.0.2
+   2.1.4

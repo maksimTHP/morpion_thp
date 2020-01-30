@@ -12,6 +12,13 @@ class Board
 
     @tour_de_jeu = 0       # Permet de compter le nombre de tour de jeu
     while @tour_de_jeu < 9 # On affiche la grille à chaque tour avec les choix des joueurs
+      if @tour_de_jeu == 0
+        joueur_tour = $name1
+      elsif @tour_de_jeu.even?
+        joueur_tour = $name1
+      else
+        joueur_tour = $name2
+      end
       # AFFICHAGE GRILLE
       puts '    1   2   3'.red
       puts '  +---+---+---+'.yellow
@@ -42,7 +49,7 @@ class Board
       puts ' | '.yellow
       puts '  +---+---+---+'.yellow
 
-      puts 'Ou veut tu jouer ?(A1,B2,C3..)'.yellow
+      puts "#{joueur_tour}, ou veut tu jouer ?(A1,B2,C3..)".yellow
       print '> '
       reponse = gets.chomp # Reponse entré par le joueur
 
@@ -55,13 +62,9 @@ class Board
           system('clear')
           if @valeur[z] == ' ' # Valide les positions
             if @tour_de_jeu.even?
-							# nom_joueur = @name
-							# puts nom_joueur
               @valeur[z] = 'X'
               @tab_win[z] = 'X'
             else
-							# nom_joueur = 2.name
-							# puts nom_joueur
               @valeur[z] = 'O'
               @tab_win[z] = 'O'
             end
@@ -78,35 +81,35 @@ class Board
       # Systeme de probabilité des victoires
 
       if @tab_win[1] == @tab_win[2] && @tab_win[3] == @tab_win[1]
-        puts 'vainqueur : 1 2 3 '.green
+        puts "#{joueur_tour} est vainqueur : 1 2 3 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[4] == @tab_win[5] && @tab_win[6] == @tab_win[4]
-        puts 'vainqueur : 4 5 6 '.green
+        puts "#{joueur_tour} est vainqueur : 4 5 6 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[7] == @tab_win[8] && @tab_win[9] == @tab_win[7]
-        puts 'vainqueur : 7 8 9 '.green
+        puts "#{joueur_tour} est vainqueur : 7 8 9 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[1] == @tab_win[4] && @tab_win[7] == @tab_win[1]
-        puts 'vainqueur : 1 4 7 '.green
+        puts "#{joueur_tour} est vainqueur : 1 4 7 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[2] == @tab_win[5] && @tab_win[8] == @tab_win[2]
-        puts 'vainqueur : 2 5 8 '.green
+        puts "#{joueur_tour} est vainqueur : 2 5 8 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[3] == @tab_win[6] && @tab_win[9] == @tab_win[3]
-        puts 'vainqueur : 3 6 9 '.green
+        puts "#{joueur_tour} est vainqueur : 3 6 9 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[1] == @tab_win[5] && @tab_win[9] == @tab_win[1]
-        puts 'vainqueur : 1 5 9 '.green
+        puts "#{joueur_tour} est vainqueur : 1 5 9 ".green
         @tour_de_jeu = 11
 
       elsif @tab_win[3] == @tab_win[5] && @tab_win[7] == @tab_win[3]
-        puts 'vainqueur : 3 5 7 '.green
+        puts "#{joueur_tour} est vainqueur : 3 5 7 ".green
         @tour_de_jeu = 11
 
     	end
@@ -115,9 +118,4 @@ class Board
 		puts 'Egalité'.red if @tour_de_jeu == 9
 	end
 
-	def victory?
-	 i = 0
-
-
-	end
 end
