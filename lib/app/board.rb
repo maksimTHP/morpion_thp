@@ -22,6 +22,7 @@ class Board
         joueur_tour = $name2
         joueur_signe = "O"
       end
+      
       # AFFICHAGE GRILLE
       puts '    1   2   3'.red
       puts '  +---+---+---+'.yellow
@@ -32,7 +33,6 @@ class Board
       print ' | '.yellow
       print (@valeur[3]).to_s.red
       puts ' | '.yellow
-
       puts '  +---+---+---+'.yellow
       print 'B | '.yellow
       print (@valeur[4]).to_s.red
@@ -41,7 +41,6 @@ class Board
       print ' | '.yellow
       print (@valeur[6]).to_s.red
       puts ' | '.yellow
-
       puts '  +---+---+---+'.yellow
       print 'C | '.yellow
       print (@valeur[7]).to_s.red
@@ -64,8 +63,8 @@ class Board
         if reponse != item
           z += 1
         else
-          #system('clear')
-          if @valeur[z] == ' '    # Valide les positions
+
+           if @valeur[z] == ' '    # Valide les positions
             system('clear')
             if @tour_de_jeu.even?
               @valeur[z] = 'X'
@@ -81,11 +80,11 @@ class Board
 						sleep 0.5            # petite pause d'un demi seconde
 						puts "Rejoue"
           end
+
         end
       end
 
       # Systeme de probabilité des victoires
-
       if @tab_win[1] == @tab_win[2] && @tab_win[3] == @tab_win[1]
         puts "#{joueur_tour} est vainqueur : 1 2 3 ".green
         @tour_de_jeu = 11
@@ -120,6 +119,7 @@ class Board
 
     	end
 		end
+
 		puts 'Egalité'.red if @tour_de_jeu == 9
 	end
 

@@ -1,5 +1,6 @@
 class Menu
-  # graphique et boucle pour recommencer
+
+  # introduction et boucle pour recommencer
   def initialize # Création du menu au lancement du jeu
     puts '+----------+----------+----------+'.yellow
     puts '|                                |'.yellow
